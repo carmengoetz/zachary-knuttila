@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <Header />
     <v-main>
       <router-view />
     </v-main>
@@ -10,13 +9,33 @@
 
 <script>
 import Footer from "./components/Footer.vue";
-import Header from "./components/Header.vue";
 
 export default {
-  components: { Footer, Header },
+  components: { Footer },
   name: "App",
   data: () => ({
     //
   }),
 };
 </script>
+
+<style lang="scss" scoped>
+@media (prefers-color-scheme: light) {
+  #app {
+    background-color: #bec6f3;
+    color: #360000;
+  }
+  .primary-color {
+    color: #360000;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  #app {
+    background-color: #360000;
+    color: #bec6f3 !important;
+  }
+  .v-application .primary--text {
+    color: #bec6f3 !important;
+  }
+}
+</style>
