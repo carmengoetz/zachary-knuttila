@@ -19,13 +19,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @media (prefers-color-scheme: light) {
   #app {
     background-color: #bec6f3;
-    color: #360000;
-  }
-  .primary-color {
     color: #360000;
   }
 }
@@ -34,8 +31,9 @@ export default {
     background-color: #360000;
     color: #bec6f3 !important;
   }
-  .v-application .primary--text {
-    color: #bec6f3 !important;
-  }
+}
+
+.error--text {
+  color: red !important;
 }
 </style>

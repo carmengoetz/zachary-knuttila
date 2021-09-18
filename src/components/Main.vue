@@ -27,10 +27,15 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .box {
   width: 400px;
   height: 600px;
-  background-color: #bec6f3;
+  @media (prefers-color-scheme: dark) {
+    background-color: #bec6f3;
+  }
+  @media (prefers-color-scheme: light) {
+    background-color: #360000;
+  }
 }
 </style>

@@ -32,6 +32,13 @@
             </v-btn>
           </template>
           <v-card>
+            <v-card-actions class="footer__dialog px-6 pt-4">
+              <v-card-title class="text-h5">Contact Zachary</v-card-title>
+              <v-spacer></v-spacer>
+              <v-btn fab text @click="dialog = false" class="footer__dialog--close">
+                <v-icon>mdi-close</v-icon>
+              </v-btn>
+            </v-card-actions>
             <Contact />
           </v-card>
         </v-dialog>
@@ -45,39 +52,50 @@ import Contact from "./Contact.vue";
 export default {
   components: { Contact },
   name: "Footer",
-  data: () => {
-    return {
-      socials: [
-        {
-          link: "https://www.instagram.com/creativereyne/",
-          name: "Instagram",
-          icon: "mdi-instagram",
-        },
-        {
-          link: "https://www.youtube.com/channel/UCyHVoqh4TK6XTRIi6m6d6UQ",
-          name: "YouTube",
-          icon: "mdi-youtube",
-        },
-        {
-          link: "https://twitter.com/CreativeReyne",
-          name: "Twitter",
-          icon: "mdi-twitter",
-        },
-      ],
-    };
-  },
+  data: () => ({
+    dialog: false,
+    socials: [
+      {
+        link: "https://www.instagram.com/zacharyknuttila/",
+        name: "Instagram",
+        icon: "mdi-instagram",
+      },
+      {
+        link: "https://www.youtube.com/user/ZacKnuttila/",
+        name: "YouTube",
+        icon: "mdi-youtube",
+      },
+      {
+        link: "https://twitter.com/zacharyknuttila",
+        name: "Twitter",
+        icon: "mdi-twitter",
+      },
+    ],
+  }),
 };
 </script>
 
 <style lang="scss" scoped>
-@import "~vuetify/src/styles/styles.sass";
-
 @media (prefers-color-scheme: light) {
   .footer {
     background-color: #bec6f3 !important;
     color: #360000 !important;
+
     &__button {
       color: #360000 !important;
+    }
+
+    a {
+      color: #360000 !important;
+    }
+
+    &__dialog {
+      background-color: #bec6f3 !important;
+      color: #360000 !important;
+
+      &--close {
+        color: #360000 !important;
+      }
     }
   }
 }
@@ -87,6 +105,19 @@ export default {
     color: #bec6f3 !important;
     &__button {
       color: #bec6f3 !important;
+    }
+
+    a {
+      color: #bec6f3 !important;
+    }
+
+    &__dialog {
+      background-color: #360000 !important;
+      color: #bec6f3 !important;
+
+      &--close {
+        color: #bec6f3 !important;
+      }
     }
   }
 }
