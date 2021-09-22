@@ -100,6 +100,11 @@ export default {
   @media (prefers-color-scheme: light) {
     background-color: #360000;
   }
+
+  @media (max-width: 600px) {
+    width: 250px;
+    height: 300px;
+  }
 }
 
 .box2 {
@@ -122,6 +127,11 @@ export default {
   }
   @media (prefers-color-scheme: light) {
     background-color: #360000;
+  }
+
+  @media (max-width: 600px) {
+    width: 250px;
+    height: 200px;
   }
 }
 </style>
