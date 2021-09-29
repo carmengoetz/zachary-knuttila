@@ -1,18 +1,16 @@
 <template>
   <v-footer padless class="footer pt-3">
-    <v-col>
-      <v-row justify="start" class="ml-10">
-        <v-card-text>
-          {{ new Date().getFullYear() }} —
-          <strong
-            >Zachary Knuttila |
-            <a href="https://www.carmengoetz.ca" target="_blank"> Carmen Goetz </a>
-          </strong>
-        </v-card-text>
+    <v-col cols="12" sm="7">
+      <v-row justify="center" justify-sm="start" class="ml-sm-10">
+        {{ new Date().getFullYear() }} —
+        <strong
+          >Zachary Knuttila |
+          <a href="https://www.carmengoetz.ca" target="_blank"> Carmen Goetz </a>
+        </strong>
       </v-row>
     </v-col>
-    <v-col>
-      <v-row justify="end" class="mr-10">
+    <v-col cols="12" sm="5">
+      <v-row justify="center" justify-sm="end" class="mr-sm-10">
         <v-btn
           v-for="social in socials"
           :key="social.name"

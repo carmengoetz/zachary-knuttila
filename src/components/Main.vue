@@ -1,15 +1,37 @@
 <template>
-  <v-container class="mt-4 mt-sm-8 mt-md-16 px-16 px-md-0">
-    <v-row>
+  <v-container class="mt-n4 mt-sm-8 mt-md-16">
+    <v-row no-gutters>
       <v-col cols="6" lg="4" class="d-none d-sm-inline">
-        <div class="box mx-auto" />
+        <v-img
+          max-width="350"
+          src="../assets/DarkModeLeft.gif"
+          lazy-src="../assets/DarkModeLeft.gif"
+          ><template v-slot:placeholder>
+            <v-row class="fill-height ma-0" align="center" justify="center">
+              <v-progress-circular
+                indeterminate
+                color="grey lighten-5"
+              ></v-progress-circular>
+            </v-row> </template
+        ></v-img>
       </v-col>
       <v-col cols="12" sm="6" lg="4">
         <Header />
         <slot></slot>
       </v-col>
       <v-col cols="12" lg="4" class="d-inline d-sm-none d-lg-inline">
-        <div class="box mx-auto" />
+        <v-img
+          max-width="350"
+          src="../assets/DarkModeRight.gif"
+          lazy-src="../assets/DarkModeRight.gif"
+          ><template v-slot:placeholder>
+            <v-row class="fill-height ma-0" align="center" justify="center">
+              <v-progress-circular
+                indeterminate
+                color="grey lighten-5"
+              ></v-progress-circular>
+            </v-row> </template
+        ></v-img>
       </v-col>
     </v-row>
   </v-container>
@@ -43,7 +65,7 @@ export default {
   }
 
   @media (max-width: 600px) {
-    width: 200px;
+    width: 300px;
     height: 300px;
   }
 }
