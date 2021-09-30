@@ -4,6 +4,7 @@
       <v-row>
         <v-col cols="12" md="6">
           <v-text-field
+            name="firstname"
             v-model="firstname"
             :rules="nameRules"
             label="First name"
@@ -12,12 +13,17 @@
         </v-col>
 
         <v-col cols="12" md="6">
-          <v-text-field v-model="lastname" label="Last name"></v-text-field>
+          <v-text-field
+            name="lastname"
+            v-model="lastname"
+            label="Last name"
+          ></v-text-field>
         </v-col>
       </v-row>
       <v-row>
         <v-col cols="12">
           <v-text-field
+            name="email"
             v-model="email"
             :rules="emailRules"
             label="E-mail"
@@ -28,6 +34,7 @@
       <v-row>
         <v-col cols="12">
           <v-textarea
+            name="message"
             v-model="message"
             :rules="messageRules"
             filled
@@ -70,14 +77,14 @@ export default {
       emailjs
         .sendForm(
           "service_4ysvek7",
-          "template_r185rjp",
+          "template_lg8tddi",
           e.target,
           "user_20V2lpCRDxS6tEJvEjxAP"
         )
         .then(
           (result) => {
             alert("Message Sent!");
-            console.log("SUCCESS!", result.status, result.text);
+            console.log("SUCCESS!", result.status, result.text, e.target);
           },
           (error) => {
             alert("There was a problem sending your message, please try again");
