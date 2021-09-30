@@ -37,7 +37,12 @@
             </v-row> </template
         ></v-img> </router-link
     ></v-row>
-    <v-row no-gutters justify="center" align="center" class="my-0 my-sm-4 mx-auto">
+    <v-row
+      no-gutters
+      justify="center"
+      align="center"
+      class="my-0 my-sm-4 mx-auto"
+    >
       <v-col v-for="page in pages" :key="page.index" :cols="page.col">
         <router-link
           :to="{

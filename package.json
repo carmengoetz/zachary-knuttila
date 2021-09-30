@@ -10,7 +10,7 @@
   "dependencies": {
     "ansi-html": "^0.0.7",
     "ansi-regex": "^5.0.1",
-    "core-js": "^3.6.5",
+    "core-js": "^3.18.1",
     "emailjs-com": "^3.2.0",
     "glob-parent": "^5.1.2",
     "nth-check": "^2.0.1",
@@ -20,7 +20,7 @@
     "url-parse": "^1.5.2",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
-    "vuetify": "^2.4.0"
+    "vuetify": "^2.5.9"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -37,9 +37,9 @@
     "prettier": "^2.2.1",
     "sass": "~1.32.0",
     "sass-loader": "^10.0.0",
-    "vue-cli-plugin-vuetify": "~2.4.1",
+    "vue-cli-plugin-vuetify": "^2.4.2",
     "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.7.0"
+    "vuetify-loader": "^1.7.3"
   },
   "eslintConfig": {
     "root": true,
