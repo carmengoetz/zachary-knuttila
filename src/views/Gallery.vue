@@ -96,8 +96,8 @@ export default {
         index: 0,
         image: require("@/assets/gallery/LearningToTieShoesGuessingGenerativeAnimation2018.jpg"),
         imageLazy: require("@/assets/gallery/LearningToTieShoesGuessingGenerativeAnimation2018-low.jpg"),
-        title: "Learning to Tie Shoes",
-        medium: "Guessing Generative Animation",
+        title: "Learning to Tie Shoes - Guessing ",
+        medium: "Generative Animation",
         date: "2018",
       },
       {
