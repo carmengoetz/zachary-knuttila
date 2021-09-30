@@ -1,7 +1,9 @@
 <template>
   <v-app>
     <v-main>
-      <router-view />
+      <transition name="fade" mode="out-in">
+        <router-view />
+      </transition>
     </v-main>
     <Footer />
   </v-app>
@@ -31,5 +33,17 @@ export default {
 
 .error--text {
   color: red !important;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from {
+  opacity: 1;
+}
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
