@@ -45,7 +45,12 @@
           <v-icon>mdi-close</v-icon>
         </v-btn>
       </v-card-actions>
-      <v-img contain max-height="700" :src="image" :lazy-src="lazy" class="mx-auto"
+      <v-img
+        contain
+        max-height="700"
+        :src="image"
+        :lazy-src="lazy"
+        class="mx-auto"
         ><template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
             <v-progress-circular

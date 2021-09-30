@@ -97,7 +97,6 @@ const routes = [
       ],
     },
   },
-
 ];
 
 const router = new VueRouter({
@@ -109,16 +108,16 @@ router.beforeEach((to, from, next) => {
   document.title = to.meta.title ?? "Creative Reyne";
 
   // Remove any stale meta tags from the document using the key attribute we set below.
-  Array.from(
-    document.querySelectorAll("[data-vue-router-controlled]")
-  ).map(el => el.parentNode.removeChild(el));
+  Array.from(document.querySelectorAll("[data-vue-router-controlled]")).map(
+    (el) => el.parentNode.removeChild(el)
+  );
 
   if (!to.meta.metaTags) return next();
 
   to.meta.metaTags
-    .map(tagDef => {
+    .map((tagDef) => {
       const tag = document.createElement("meta");
-      Object.keys(tagDef).forEach(key => {
+      Object.keys(tagDef).forEach((key) => {
         tag.setAttribute(key, tagDef[key]);
       });
 
@@ -128,10 +127,9 @@ router.beforeEach((to, from, next) => {
       return tag;
     })
     // Add the meta tags to the document head.
-    .forEach(tag => document.head.appendChild(tag));
+    .forEach((tag) => document.head.appendChild(tag));
 
   next();
 });
-
 
 export default router;

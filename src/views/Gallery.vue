@@ -11,7 +11,7 @@
           max-width="300"
           contain
           src="../assets/heading.png"
-          lazy-src="../assets/heading-low.png"
+          lazy-src="../assets/heading2-low.png"
           class="gallery--dark my-4 my-md-8"
           ><template v-slot:placeholder>
             <v-row class="fill-height ma-0" align="center" justify="center">
@@ -95,7 +95,7 @@ export default {
       {
         index: 0,
         image: require("@/assets/gallery/LearningToTieShoesGuessingGenerativeAnimation2018.jpg"),
-        imageLazy: require("@/assets/gallery/LearningToTieShoesGuessingGenerativeAnimation2018.jpg"),
+        imageLazy: require("@/assets/gallery/LearningToTieShoesGuessingGenerativeAnimation2018-low.jpg"),
         title: "Learning to Tie Shoes",
         medium: "Guessing Generative Animation",
         date: "2018",
@@ -103,7 +103,7 @@ export default {
       {
         index: 1,
         image: require("@/assets/gallery/DoYouFeelAloneTogetherRisograph2019.jpg"),
-        imageLazy: require("@/assets/gallery/DoYouFeelAloneTogetherRisograph2019.jpg"),
+        imageLazy: require("@/assets/gallery/DoYouFeelAloneTogetherRisograph2019-low.jpg"),
         title: "Do You Feel Alone Together",
         medium: "Risograph",
         date: "2019",
@@ -111,7 +111,7 @@ export default {
       {
         index: 2,
         image: require("@/assets/gallery/TopographicalMapOfUnrealMoons1Lithograph2016.jpg"),
-        imageLazy: require("@/assets/gallery/TopographicalMapOfUnrealMoons1Lithograph2016.jpg"),
+        imageLazy: require("@/assets/gallery/TopographicalMapOfUnrealMoons1Lithograph2016-low.jpg"),
         title: "Topographical Map of Unreal Moons 1",
         medium: "Lithograph",
         date: "2016",
@@ -119,7 +119,7 @@ export default {
       {
         index: 3,
         image: require("@/assets/gallery/TopographicalMapOfUnrealMoons2Lithograph2016.jpg"),
-        imageLazy: require("@/assets/gallery/TopographicalMapOfUnrealMoons2Lithograph2016.jpg"),
+        imageLazy: require("@/assets/gallery/TopographicalMapOfUnrealMoons2Lithograph2016-low.jpg"),
         title: "Topographical Map of Unreal Moons 2",
         medium: "Lithograph",
         date: "2016",
@@ -127,7 +127,7 @@ export default {
       {
         index: 4,
         image: require("@/assets/gallery/TopographicalMapOfUnrealMoons3Lithograph2016.jpg"),
-        imageLazy: require("@/assets/gallery/TopographicalMapOfUnrealMoons3Lithograph2016.jpg"),
+        imageLazy: require("@/assets/gallery/TopographicalMapOfUnrealMoons3Lithograph2016-low.jpg"),
         title: "Topographical Map of Unreal Moons 3",
         medium: "Lithograph",
         date: "2016",
