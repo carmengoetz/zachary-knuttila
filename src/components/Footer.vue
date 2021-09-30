@@ -1,7 +1,7 @@
 <template>
   <v-footer padless class="footer pt-3">
     <v-col cols="12" sm="7">
-      <v-row justify="center" justify-sm="start" class="ml-sm-10">
+      <v-row justify="center" justify-sm="start" class="footer__copy ml-sm-10">
         {{ new Date().getFullYear() }} —
         <strong
           >Zachary Knuttila |
@@ -74,33 +74,41 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (prefers-color-scheme: light) {
-  .footer {
+.footer {
+  background-color: #bec6f3 !important;
+  color: #360000 !important;
+
+  &__copy {
+    font-family: "Raleway", sans-serif;
+  }
+
+  &__button {
+    color: #360000 !important;
+  }
+
+  a {
+    color: #360000 !important;
+  }
+
+  &__dialog {
     background-color: #bec6f3 !important;
     color: #360000 !important;
 
-    &__button {
+    &--close {
       color: #360000 !important;
-    }
-
-    a {
-      color: #360000 !important;
-    }
-
-    &__dialog {
-      background-color: #bec6f3 !important;
-      color: #360000 !important;
-
-      &--close {
-        color: #360000 !important;
-      }
     }
   }
 }
+
 @media (prefers-color-scheme: dark) {
   .footer {
     background-color: #360000 !important;
     color: #bec6f3 !important;
+
+    &__copy {
+      font-family: "Raleway", sans-serif;
+    }
+
     &__button {
       color: #bec6f3 !important;
     }

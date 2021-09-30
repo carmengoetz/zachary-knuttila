@@ -73,13 +73,11 @@ export default {
     bottom: 0;
     width: 100%;
     height: 48px;
+    background-color: #360000;
+    color: #bec6f3;
     @media (prefers-color-scheme: dark) {
       background-color: #bec6f3;
       color: #360000;
-    }
-    @media (prefers-color-scheme: light) {
-      background-color: #360000;
-      color: #bec6f3;
     }
   }
 }

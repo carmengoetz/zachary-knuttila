@@ -1,20 +1,31 @@
 <template>
   <Main>
-    <div class="pb-8 px-2 px-md-0">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Cursus risus at ultrices mi tempus
-      imperdiet nulla. Hac habitasse platea dictumst quisque. Tristique senectus et netus
-      et malesuada fames ac turpis egestas. Mi tempus imperdiet nulla malesuada
-      pellentesque elit eget gravida cum. Lorem mollis aliquam ut porttitor leo a. Justo
-      laoreet sit amet cursus sit amet dictum sit amet. Erat pellentesque adipiscing
-      commodo elit at imperdiet dui accumsan sit. Amet mattis vulputate enim nulla aliquet
-      porttitor lacus luctus. Velit sed ullamcorper morbi tincidunt. Vitae elementum
-      curabitur vitae nunc sed velit dignissim. Sit amet luctus venenatis lectus magna. In
-      arcu cursus euismod quis viverra nibh cras pulvinar. Libero volutpat sed cras
-      ornare. In pellentesque massa placerat duis ultricies lacus sed. Nulla pellentesque
-      dignissim enim sit. Sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae.
-      Facilisis sed odio morbi quis commodo odio. Nibh sed pulvinar proin gravida
-      hendrerit. Nisl vel pretium lectus quam.
+    <div class="cv--text mx-auto px-2 px-md-0 mx-0 mx-md-4">
+      <div class="cv--text text-body-1 mb-4">August 2021 Nuit Blanche Regina</div>
+      <div class="cv--text text-body-1">May 2021 Nuit Blanche YXE’s</div>
+      <div class="cv--text text-caption mb-4">Winter's End</div>
+      <div class="cv--text text-body-1">December 2020 Biofeedback’s Virtual Gallery</div>
+      <div class="cv--text text-caption mb-4">
+        as part of group exhibition Pending Install
+      </div>
+      <div class="cv--text text-body-1">August 2018 Snelgrove Gallery</div>
+      <div class="cv--text text-caption mb-4">as part of group exhibition Boom</div>
+      <div class="cv--text text-body-1">July 2018 Flint Saloon</div>
+      <div class="cv--text text-caption mb-4">
+        as part of group exhibition Night; Neon Dreams
+      </div>
+      <div class="cv--text text-body-1">June 2018 Snelgrove Gallery</div>
+      <div class="cv--text text-caption mb-4">
+        as part of group exhibition Full-Stack/Half-Stack/Night/Of-Motion
+      </div>
+      <div class="cv--text text-body-1">December 2017 The Mint Skateboarding</div>
+      <div class="cv--text text-caption mb-4">
+        as part of group exhibition 外国人の少年
+      </div>
+      <div class="cv--text text-body-1">Study Under:</div>
+      <div class="cv--text text-body-1">Jakob Semko</div>
+      <div class="cv--text text-body-1">Robyn Anderson</div>
+      <div class="cv--text text-body-1">Patti Shiplett</div>
     </div>
   </Main>
 </template>
@@ -31,4 +42,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.cv {
+  &--text {
+    font-family: "Raleway", sans-serif !important;
+    font-weight: 600;
+  }
+}
+</style>

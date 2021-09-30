@@ -90,27 +90,26 @@ export default {
 </script>
 
 <style lang="scss">
-@media (prefers-color-scheme: light) {
-  .form {
-    background-color: #bec6f3;
-    color: #360000;
+.form {
+  background-color: #bec6f3;
+  color: #360000;
 
-    &__button {
-      background-color: #360000 !important;
-      color: #bec6f3 !important;
-    }
-  }
-
-  .v-text-field .v-label,
-  .v-text-field .v-label--active {
-    color: #360000 !important;
-  }
-
-  .v-input__slot:before,
-  .v-input__slot:after {
-    border-color: #360000 !important;
+  &__button {
+    background-color: #360000 !important;
+    color: #bec6f3 !important;
   }
 }
+
+.v-text-field .v-label,
+.v-text-field .v-label--active {
+  color: #360000 !important;
+}
+
+.v-input__slot:before,
+.v-input__slot:after {
+  border-color: #360000 !important;
+}
+
 @media (prefers-color-scheme: dark) {
   .form {
     background-color: #360000;

@@ -20,14 +20,10 @@ export default {
 </script>
 
 <style lang="scss">
-@media (prefers-color-scheme: light) {
-  #app {
-    background-color: #bec6f3;
-    color: #360000;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  #app {
+#app {
+  background-color: #bec6f3;
+  color: #360000;
+  @media (prefers-color-scheme: dark) {
     background-color: #360000;
     color: #bec6f3 !important;
   }

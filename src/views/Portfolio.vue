@@ -6,9 +6,37 @@
           name: 'Home',
         }"
       >
-        <v-card-title> Zachary Knuttila </v-card-title>
-      </router-link></v-row
-    >
+        <v-img
+          max-height="40"
+          max-width="350"
+          contain
+          src="../assets/heading.png"
+          lazy-src="../assets/heading-low.png"
+          class="portfolio--dark"
+          ><template v-slot:placeholder>
+            <v-row class="fill-height ma-0" align="center" justify="center">
+              <v-progress-circular
+                indeterminate
+                color="grey lighten-5"
+              ></v-progress-circular>
+            </v-row> </template
+        ></v-img>
+        <v-img
+          max-height="40"
+          max-width="350"
+          contain
+          src="../assets/heading2.png"
+          lazy-src="../assets/heading-low.png"
+          class="portfolio--light"
+          ><template v-slot:placeholder>
+            <v-row class="fill-height ma-0" align="center" justify="center">
+              <v-progress-circular
+                indeterminate
+                color="grey lighten-5"
+              ></v-progress-circular>
+            </v-row> </template
+        ></v-img> </router-link
+    ></v-row>
     <v-row class="mt-n8 mt-sm-0">
       <v-col>
         <v-row v-for="image in images" :key="image.index">
@@ -131,13 +159,25 @@ export default {
     bottom: 0;
     width: 100%;
     height: 48px;
+    background-color: #360000;
+    color: #bec6f3;
     @media (prefers-color-scheme: dark) {
       background-color: #bec6f3;
       color: #360000;
     }
-    @media (prefers-color-scheme: light) {
-      background-color: #360000;
-      color: #bec6f3;
+  }
+
+  &--light {
+    display: flex;
+    @media (prefers-color-scheme: dark) {
+      display: none;
+    }
+  }
+
+  &--dark {
+    display: none;
+    @media (prefers-color-scheme: dark) {
+      display: flex;
     }
   }
 }
