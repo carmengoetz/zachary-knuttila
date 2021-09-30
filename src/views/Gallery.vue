@@ -110,6 +110,14 @@ export default {
       },
       {
         index: 2,
+        image: require("@/assets/gallery/TheSoundOfWishingIWasAnywhereElseStoneLithograph2018.png"),
+        imageLazy: require("@/assets/gallery/TheSoundOfWishingIWasAnywhereElseStoneLithograph2018-low.png"),
+        title: "Learning to Tie Shoes",
+        medium: "Guessing Generative Animation",
+        date: "2018",
+      },
+      {
+        index: 3,
         image: require("@/assets/gallery/TopographicalMapOfUnrealMoons1Lithograph2016.jpg"),
         imageLazy: require("@/assets/gallery/TopographicalMapOfUnrealMoons1Lithograph2016-low.jpg"),
         title: "Topographical Map of Unreal Moons 1",
@@ -117,7 +125,7 @@ export default {
         date: "2016",
       },
       {
-        index: 3,
+        index: 4,
         image: require("@/assets/gallery/TopographicalMapOfUnrealMoons2Lithograph2016.jpg"),
         imageLazy: require("@/assets/gallery/TopographicalMapOfUnrealMoons2Lithograph2016-low.jpg"),
         title: "Topographical Map of Unreal Moons 2",
@@ -125,7 +133,7 @@ export default {
         date: "2016",
       },
       {
-        index: 4,
+        index: 5,
         image: require("@/assets/gallery/TopographicalMapOfUnrealMoons3Lithograph2016.jpg"),
         imageLazy: require("@/assets/gallery/TopographicalMapOfUnrealMoons3Lithograph2016-low.jpg"),
         title: "Topographical Map of Unreal Moons 3",

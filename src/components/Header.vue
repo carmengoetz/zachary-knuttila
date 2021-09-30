@@ -8,7 +8,7 @@
       >
         <v-img
           max-height="40"
-          max-width="350"
+          max-width="300"
           contain
           src="../assets/heading.png"
           lazy-src="../assets/heading-low.png"
@@ -23,7 +23,7 @@
         ></v-img>
         <v-img
           max-height="40"
-          max-width="350"
+          max-width="300"
           contain
           src="../assets/heading2.png"
           lazy-src="../assets/heading2-low.png"
@@ -37,12 +37,7 @@
             </v-row> </template
         ></v-img> </router-link
     ></v-row>
-    <v-row
-      no-gutters
-      justify="center"
-      align="center"
-      class="my-0 my-sm-4 mx-auto"
-    >
+    <v-row no-gutters justify="center" align="center" class="my-0 my-sm-4 mx-auto">
       <v-col v-for="page in pages" :key="page.index" :cols="page.col">
         <router-link
           :to="{
@@ -50,7 +45,7 @@
           }"
         >
           <v-img
-            max-height="40"
+            max-height="30"
             contain
             :src="page.imgDark"
             :lazy-src="page.lazyDark"
@@ -64,7 +59,7 @@
               </v-row> </template
           ></v-img>
           <v-img
-            max-height="40"
+            max-height="30"
             contain
             :src="page.imgLight"
             :lazy-src="page.lazyLight"

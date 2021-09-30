@@ -15,9 +15,6 @@ import Footer from "./components/Footer.vue";
 export default {
   components: { Footer },
   name: "App",
-  data: () => ({
-    //
-  }),
 };
 </script>
 
@@ -29,10 +26,6 @@ export default {
     background-color: #360000;
     color: #bec6f3 !important;
   }
-}
-
-.error--text {
-  color: red !important;
 }
 
 .fade-enter-active,

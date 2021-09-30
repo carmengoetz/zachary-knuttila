@@ -71,6 +71,9 @@ export default {
     ],
     message: "",
     messageRules: [(v) => !!v || "Message is required"],
+    snackbarSuccess: false,
+    text: `Hello, I'm a snackbar`,
+    snackbarFail: false,
   }),
   methods: {
     sendEmail: (e) => {
@@ -84,13 +87,14 @@ export default {
         .then(
           (result) => {
             alert("Message Sent!");
-            console.log("SUCCESS!", result.status, result.text, e.target);
+            console.log("SUCCESS!", result.status, result.text);
           },
           (error) => {
             alert("There was a problem sending your message, please try again");
             console.log("FAILED...", error);
           }
-        );
+        )
+        .bind(this);
     },
   },
 };
@@ -119,6 +123,10 @@ export default {
 .v-input__slot:before,
 .v-input__slot:after {
   border-color: #360000 !important;
+}
+
+.error--text {
+  color: red !important;
 }
 
 @media (prefers-color-scheme: dark) {

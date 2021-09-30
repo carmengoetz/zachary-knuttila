@@ -97,6 +97,10 @@ const routes = [
       ],
     },
   },
+  {
+    path: "/:catchAll(.*)",
+    redirect: "/",
+  },
 ];
 
 const router = new VueRouter({
