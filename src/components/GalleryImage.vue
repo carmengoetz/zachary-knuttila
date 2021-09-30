@@ -4,16 +4,18 @@
     transition="fade-transition"
     max-width="1400"
     content-class="elevation-0"
+    fullscreen
   >
     <template v-slot:activator="{ on, attrs }">
       <v-hover v-slot="{ hover }">
         <v-img
           max-width="500"
+          contain
           :src="image"
           :lazy-src="lazy"
           v-bind="attrs"
           v-on="on"
-          class="mx-auto"
+          class="gallery__image mx-auto"
           ><template v-slot:placeholder>
             <v-row class="fill-height ma-0" align="center" justify="center">
               <v-progress-circular
@@ -26,11 +28,11 @@
             <v-row
               no-gutters
               v-if="hover"
-              justify="center"
               align="center"
-              class="transition-slow-in-slow-out portfolio--reveal"
+              class="transition-slow-in-slow-out gallery--reveal pl-4"
             >
-              {{ title }} - {{ date }}
+              {{ title.toUpperCase() }}<br />
+              {{ medium }} {{ date }}
             </v-row>
           </v-expand-transition>
         </v-img>
@@ -43,7 +45,7 @@
           <v-icon>mdi-close</v-icon>
         </v-btn>
       </v-card-actions>
-      <v-img contain height="700" :src="image" :lazy-src="lazy" class="mx-auto"
+      <v-img contain max-height="700" :src="image" :lazy-src="lazy" class="mx-auto"
         ><template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="center">
             <v-progress-circular
@@ -58,8 +60,8 @@
 
 <script>
 export default {
-  name: "PortfolioImage",
-  props: ["index", "image", "lazy", "title", "date"],
+  name: "GalleryImage",
+  props: ["index", "image", "lazy", "title", "medium", "date"],
   data: () => ({
     dialog: [],
   }),
@@ -67,12 +69,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.portfolio {
+.gallery {
+  &__image {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &--reveal {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 48px;
+    height: 60px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
     background-color: #360000;
     color: #bec6f3;
     @media (prefers-color-scheme: dark) {

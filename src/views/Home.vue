@@ -21,7 +21,11 @@
         been subjected to."
       </p>
 
-      <p class="home ml-8">Kyle Zurvinski, 2020</p>
+      <div class="home ml-8">
+        Kyle Zurvinski, 2020<br /><a href="https://biofeedbackcollective.com/"
+          >Biofeedback Collective</a
+        >
+      </div>
     </div>
   </Main>
 </template>
@@ -46,6 +50,13 @@ export default {
   &--small {
     font-size: 14px;
     font-weight: 400;
+  }
+}
+
+a {
+  color: #360000 !important;
+  @media (prefers-color-scheme: dark) {
+    color: #bec6f3 !important;
   }
 }
 </style>

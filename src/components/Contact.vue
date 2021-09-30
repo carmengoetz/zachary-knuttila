@@ -97,12 +97,16 @@ export default {
   &__button {
     background-color: #360000 !important;
     color: #bec6f3 !important;
+    font-family: "Raleway", sans-serif !important;
+    font-weight: 600;
   }
 }
 
 .v-text-field .v-label,
 .v-text-field .v-label--active {
   color: #360000 !important;
+  font-family: "Raleway", sans-serif !important;
+  font-weight: 600;
 }
 
 .v-input__slot:before,

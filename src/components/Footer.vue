@@ -1,5 +1,5 @@
 <template>
-  <v-footer padless class="footer pt-3">
+  <v-footer padless class="footer my-3">
     <v-col cols="12" sm="7">
       <v-row justify="center" justify-sm="start" class="footer__copy ml-sm-10">
         {{ new Date().getFullYear() }} —
@@ -31,7 +31,7 @@
           </template>
           <v-card>
             <v-card-actions class="footer__dialog px-6 pt-4">
-              <v-card-title class="text-h5">Contact Zachary</v-card-title>
+              <v-card-title class="footer--text text-h5">Contact Zachary</v-card-title>
               <v-spacer></v-spacer>
               <v-btn fab text @click="dialog = false" class="footer__dialog--close">
                 <v-icon>mdi-close</v-icon>
@@ -63,11 +63,6 @@ export default {
         name: "YouTube",
         icon: "mdi-youtube",
       },
-      {
-        link: "https://twitter.com/zacharyknuttila",
-        name: "Twitter",
-        icon: "mdi-twitter",
-      },
     ],
   }),
 };
@@ -97,6 +92,11 @@ export default {
     &--close {
       color: #360000 !important;
     }
+  }
+
+  &--text {
+    font-family: "Raleway", sans-serif !important;
+    font-weight: 600;
   }
 }
 

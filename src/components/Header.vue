@@ -86,8 +86,8 @@ export default {
     return {
       pages: [
         {
-          path: "/portfolio",
-          name: "Portfolio",
+          path: "/gallery",
+          name: "Gallery",
           imgDark: require("@/assets/Gallery.png"),
           lazyDark: require("@/assets/Gallery-low.png"),
           imgLight: require("@/assets/Gallery2.png"),
