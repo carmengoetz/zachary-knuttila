@@ -41,7 +41,7 @@
     <v-card color="transparent">
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn fab text @click="$set(dialog, index, false)">
+        <v-btn fab text @click="$set(dialog, index, false)" class="gallery__close">
           <v-icon>mdi-close</v-icon>
         </v-btn>
       </v-card-actions>
@@ -73,6 +73,13 @@ export default {
   &__image {
     &:hover {
       cursor: pointer;
+    }
+  }
+
+  &__close {
+    color: #360000;
+    @media (prefers-color-scheme: dark) {
+      color: #bec6f3;
     }
   }
 
