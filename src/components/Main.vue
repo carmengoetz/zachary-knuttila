@@ -1,5 +1,5 @@
 <template>
-  <v-container class="mt-8">
+  <v-container>
     <v-row no-gutters>
       <v-col class="d-none d-sm-inline">
         <v-row no-gutters class="mb-4">
@@ -39,7 +39,7 @@
           </p>
         </v-row>
       </v-col>
-      <v-col class="mt-8">
+      <v-col>
         <slot></slot>
       </v-col>
       <v-col cols="12" class="d-inline d-sm-none">

@@ -1,13 +1,13 @@
 <template>
   <v-app-bar
     flat
-    max-height="80"
-    height="80"
+    max-height="132"
+    height="132"
     color="transparent"
-    class="nav px-0 px-sm-16 mt-4"
+    class="nav px-0 px-sm-16 mt-4 mt-md-0"
   >
     <v-row no-gutters>
-      <v-col cols="12" md="9" xl="10" class="mt-16 mt-md-6">
+      <v-col cols="12" md="9" xl="10">
         <router-link
           :to="{
             name: 'Home',
@@ -15,10 +15,9 @@
         >
           <v-img
             :max-width="getImageWidth()"
-            contain
             src="../assets/heading.png"
             lazy-src="../assets/heading-low.png"
-            class="nav--dark mx-auto mx-md-0"
+            class="nav--dark mx-auto mx-md-0 my-4 my-md-0"
             ><template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular
@@ -29,7 +28,6 @@
           ></v-img>
           <v-img
             :max-width="getImageWidth()"
-            contain
             src="../assets/heading2.png"
             lazy-src="../assets/heading2-low.png"
             class="nav--light mx-auto mx-md-0"
@@ -56,11 +54,9 @@
           :to="{
             name: page.name,
           }"
-          class="mx-8 align-end"
         >
           <v-img
             :max-width="page.width"
-            contain
             :src="page.imgDark"
             :lazy-src="page.lazyDark"
             class="nav--dark mx-auto mx-md-0"
@@ -74,7 +70,6 @@
           ></v-img>
           <v-img
             :max-width="page.width"
-            contain
             :src="page.imgLight"
             :lazy-src="page.lazyLight"
             class="nav--light mx-auto mx-md-0"
