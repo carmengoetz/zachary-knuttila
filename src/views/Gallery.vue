@@ -1,44 +1,7 @@
 <template>
-  <v-container>
-    <v-row justify="center" justify-sm="start" align="center"
-      ><router-link
-        :to="{
-          name: 'Home',
-        }"
-      >
-        <v-img
-          max-height="40"
-          max-width="300"
-          contain
-          src="../assets/heading.png"
-          lazy-src="../assets/heading2-low.png"
-          class="gallery--dark my-4 my-md-8"
-          ><template v-slot:placeholder>
-            <v-row class="fill-height ma-0" align="center" justify="center">
-              <v-progress-circular
-                indeterminate
-                color="grey lighten-5"
-              ></v-progress-circular>
-            </v-row> </template
-        ></v-img>
-        <v-img
-          max-height="40"
-          max-width="300"
-          contain
-          src="../assets/heading2.png"
-          lazy-src="../assets/heading-low.png"
-          class="gallery--light my-4 my-md-8"
-          ><template v-slot:placeholder>
-            <v-row class="fill-height ma-0" align="center" justify="center">
-              <v-progress-circular
-                indeterminate
-                color="grey lighten-5"
-              ></v-progress-circular>
-            </v-row> </template
-        ></v-img> </router-link
-    ></v-row>
+  <v-container class="mt-8 mt-md-0">
     <v-row class="d-none d-sm-flex">
-      <v-col>
+      <v-col cols="12" lg="6">
         <v-row v-for="image in images" :key="image.index">
           <div v-if="image.index % 2 == 0" class="my-8 mx-auto">
             <GalleryImage
@@ -52,7 +15,7 @@
           </div>
         </v-row>
       </v-col>
-      <v-col>
+      <v-col cols="12" lg="6">
         <v-row v-for="image in images" :key="image.index">
           <div v-if="image.index % 2 != 0" class="my-8 mx-auto">
             <GalleryImage
@@ -142,6 +105,11 @@ export default {
       },
     ],
   }),
+  methods: {
+    getImageWidth: () => {
+      return window.matchMedia("(min-width: 1904px)").matches ? "400" : "300";
+    },
+  },
 };
 </script>
 

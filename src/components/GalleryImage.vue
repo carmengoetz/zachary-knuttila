@@ -9,7 +9,7 @@
     <template v-slot:activator="{ on, attrs }">
       <v-hover v-slot="{ hover }">
         <v-img
-          max-width="500"
+          :max-width="getImageWidth()"
           contain
           :src="image"
           :lazy-src="lazy"
@@ -41,18 +41,13 @@
     <v-card color="transparent">
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn
-          fab
-          text
-          @click="$set(dialog, index, false)"
-          class="gallery__close"
-        >
+        <v-btn fab text @click="$set(dialog, index, false)" class="gallery__close">
           <v-icon>mdi-close</v-icon>
         </v-btn>
       </v-card-actions>
       <v-img
         contain
-        max-height="700"
+        :max-height="getDialogHeight()"
         :src="image"
         :lazy-src="lazy"
         class="mx-auto"
@@ -75,6 +70,14 @@ export default {
   data: () => ({
     dialog: [],
   }),
+  methods: {
+    getImageWidth: () => {
+      return window.matchMedia("(min-width: 1904px)").matches ? "800" : "500";
+    },
+    getDialogHeight: () => {
+      return window.matchMedia("(min-width: 1904px)").matches ? "1000" : "700";
+    },
+  },
 };
 </script>
 

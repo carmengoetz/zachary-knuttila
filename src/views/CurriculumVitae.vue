@@ -1,39 +1,54 @@
 <template>
-  <Main>
-    <div class="cv--text mx-auto px-2 px-md-0 mx-0 mx-md-4">
-      <div class="cv--text text-body-1 mb-4">
-        August 2021 Nuit Blanche Regina
-      </div>
-      <div class="cv--text text-body-1">May 2021 Nuit Blanche YXE’s</div>
-      <div class="cv--text text-caption mb-4">Winter's End</div>
-      <div class="cv--text text-body-1">
-        December 2020 Biofeedback’s Virtual Gallery
-      </div>
-      <div class="cv--text text-caption mb-4">
-        as part of group exhibition Pending Install
-      </div>
-      <div class="cv--text text-body-1">August 2018 Snelgrove Gallery</div>
-      <div class="cv--text text-caption mb-4">
-        as part of group exhibition Boom
-      </div>
-      <div class="cv--text text-body-1">July 2018 Flint Saloon</div>
-      <div class="cv--text text-caption mb-4">
-        as part of group exhibition Night; Neon Dreams
-      </div>
-      <div class="cv--text text-body-1">June 2018 Snelgrove Gallery</div>
-      <div class="cv--text text-caption mb-4">
-        as part of group exhibition Full-Stack/Half-Stack/Night/Of-Motion
-      </div>
-      <div class="cv--text text-body-1">
-        December 2017 The Mint Skateboarding
-      </div>
-      <div class="cv--text text-caption mb-4">
-        as part of group exhibition 外国人の少年
-      </div>
-      <div class="cv--text text-body-1">Study Under:</div>
-      <div class="cv--text text-body-1">Jakob Semko</div>
-      <div class="cv--text text-body-1">Robyn Anderson</div>
-      <div class="cv--text text-body-1">Patti Shiplett</div>
+  <Main
+    :imgDark="require('@/assets/DarkModeRight.gif')"
+    :lazyDark="require('@/assets/DarkModeRight-low.gif')"
+    :imgLight="require('@/assets/LightModeRight.gif')"
+    :lazyLight="require('@/assets/LightModeRight-low.gif')"
+    title="Last Home of the Lemurians ‐ Habitat 2"
+    medium="Digital, 2021"
+  >
+    <div class="cv__text mx-0 mx-md-4">
+      <p class="cv__text--large">August 2021 Nuit Blanche Regina</p>
+      <p class="cv__text--large">
+        May 2021 Nuit Blanche YXE’s<br />
+        <span class="cv__text--small text-caption mb-4">Winter's End</span>
+      </p>
+      <p class="cv__text--large">
+        December 2020 Biofeedback’s Virtual Gallery<br />
+        <span class="cv__text--small text-caption mb-4">
+          as part of group exhibition Pending Install</span
+        >
+      </p>
+      <p class="cv__text--large">
+        August 2018 Snelgrove Gallery<br />
+        <span class="cv__text--small text-caption mb-4">
+          as part of group exhibition Boom</span
+        >
+      </p>
+      <p class="cv__text--large">
+        July 2018 Flint Saloon<br />
+        <span class="cv__text--small text-caption mb-4">
+          as part of group exhibition Night; Neon Dreams</span
+        >
+      </p>
+      <p class="cv__text--large">
+        June 2018 Snelgrove Gallery<br />
+        <span class="cv__text--small text-caption mb-4">
+          as part of group exhibition Full-Stack/Half-Stack/Night/Of-Motion</span
+        >
+      </p>
+      <p class="cv__text--large">
+        December 2017 The Mint Skateboarding<br />
+        <span class="cv__text--small text-caption mb-4">
+          as part of group exhibition 外国人の少年</span
+        >
+      </p>
+      <p class="cv__text--large">
+        Study Under:<br />
+        Jakob Semko<br />
+        Robyn Anderson<br />
+        Patti Shiplett
+      </p>
     </div>
   </Main>
 </template>
@@ -52,9 +67,17 @@ export default {
 
 <style lang="scss" scoped>
 .cv {
-  &--text {
+  &__text {
     font-family: "Raleway", sans-serif !important;
     font-weight: 600;
+
+    &--large {
+      font-size: 20px;
+    }
+
+    &--small {
+      font-size: 16px !important;
+    }
   }
 }
 </style>

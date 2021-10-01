@@ -21,7 +21,7 @@ const routes = [
         },
         {
           property: "og:url",
-          content: "https://zacharyknuttila.com",
+          content: "https://zacharyjknuttila.com",
         },
         {
           property: "twitter:description",
@@ -29,7 +29,7 @@ const routes = [
         },
         {
           property: "twitter:url",
-          content: "https://zacharyknuttila.com",
+          content: "https://zacharyjknuttila.com",
         },
       ],
     },
@@ -44,23 +44,23 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "",
+          content: "Zachary Knuttila is an emerging artist based in Saskatoon, focusing on digital work and traditional printmaking.",
         },
         {
           property: "og:description",
-          content: "",
+          content: "Zachary Knuttila is an emerging artist based in Saskatoon, focusing on digital work and traditional printmaking.",
         },
         {
           property: "og:url",
-          content: "https://zacharyknuttila.com/cv",
+          content: "https://zacharyjknuttila.com/cv",
         },
         {
           property: "twitter:description",
-          content: "",
+          content: "Zachary Knuttila is an emerging artist based in Saskatoon, focusing on digital work and traditional printmaking.",
         },
         {
           property: "twitter:url",
-          content: "https://zacharyknuttila.com/cv",
+          content: "https://zacharyjknuttila.com/cv",
         },
       ],
     },
@@ -76,23 +76,23 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "",
+          content: "Zachary Knuttila is an emerging artist based in Saskatoon, focusing on digital work and traditional printmaking.",
         },
         {
           property: "og:description",
-          content: "",
+          content: "Zachary Knuttila is an emerging artist based in Saskatoon, focusing on digital work and traditional printmaking.",
         },
         {
           property: "og:url",
-          content: "https://zacharyknuttila.com/gallery",
+          content: "https://zacharyjknuttila.com/gallery",
         },
         {
           property: "twitter:description",
-          content: "",
+          content: "Zachary Knuttila is an emerging artist based in Saskatoon, focusing on digital work and traditional printmaking.",
         },
         {
           property: "twitter:url",
-          content: "https://zacharyknuttila.com/gallery",
+          content: "https://zacharyjknuttila.com/gallery",
         },
       ],
     },

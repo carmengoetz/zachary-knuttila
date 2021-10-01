@@ -1,14 +1,14 @@
 <template>
-  <v-container class="mt-n4 mt-sm-8 mt-md-16">
+  <v-container class="mt-8">
     <v-row no-gutters>
-      <v-col cols="6" lg="4" class="d-none d-sm-inline">
-        <v-row no-gutters class="my-4">
+      <v-col class="d-none d-sm-inline">
+        <v-row no-gutters class="mb-4">
           <v-img
-            max-width="350"
+            max-width="600"
             contain
-            src="../assets/LightModeLeft.gif"
-            lazy-src="../assets/LightModeLeft-low.gif"
-            class="main--light mx-auto"
+            :src="imgDark"
+            :lazy-src="lazyDark"
+            class="main--dark mx-auto"
             ><template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular
@@ -18,11 +18,11 @@
               </v-row> </template
           ></v-img>
           <v-img
-            max-width="350"
+            max-width="600"
             contain
-            src="../assets/DarkModeLeft.gif"
-            lazy-src="../assets/DarkModeLeft-low.gif"
-            class="main--dark mx-auto"
+            :src="imgLight"
+            :lazy-src="lazyLight"
+            class="main--light mx-auto"
             ><template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular
@@ -33,24 +33,23 @@
           ></v-img>
         </v-row>
         <v-row no-gutters>
-          <p class="main--text mx-auto">
-            Last Home of the Lemurians ‐ Habitat 1<br />
-            Digital, 2021
+          <p class="main--text ml-8">
+            {{ title }}<br />
+            {{ medium }}
           </p>
         </v-row>
       </v-col>
-      <v-col cols="12" sm="6" lg="4">
-        <Header />
+      <v-col class="mt-8">
         <slot></slot>
       </v-col>
-      <v-col cols="12" lg="4" class="d-inline d-sm-none d-lg-inline">
-        <v-row no-gutters class="my-4">
+      <v-col cols="12" class="d-inline d-sm-none">
+        <v-row no-gutters class="mb-4">
           <v-img
-            max-width="350"
+            max-width="600"
             contain
-            src="../assets/LightModeRight.gif"
-            lazy-src="../assets/LightModeRight-low.gif"
-            class="main--light mx-auto"
+            :src="imgDark"
+            :lazy-src="lazyDark"
+            class="main--dark mx-auto"
             ><template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular
@@ -60,11 +59,11 @@
               </v-row> </template
           ></v-img>
           <v-img
-            max-width="350"
+            max-width="600"
             contain
-            src="../assets/DarkModeRight.gif"
-            lazy-src="../assets/DarkModeRight-low.gif"
-            class="main--dark mx-auto"
+            :src="imgLight"
+            :lazy-src="lazyLight"
+            class="main--light mx-auto"
             ><template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular
@@ -76,8 +75,8 @@
         </v-row>
         <v-row no-gutters>
           <p class="main--text mx-auto">
-            Last Home of the Lemurians ‐ Habitat 2<br />
-            Digital, 2021
+            {{ title }}<br />
+            {{ medium }}
           </p>
         </v-row>
       </v-col>
@@ -86,14 +85,9 @@
 </template>
 
 <script>
-import Header from "../components/Header.vue";
-
 export default {
   name: "Main",
-
-  components: {
-    Header,
-  },
+  props: ["imgDark", "lazyDark", "imgLight", "lazyLight", "title", "medium"],
 };
 </script>
 

@@ -5,9 +5,7 @@
         {{ new Date().getFullYear() }} —
         <strong
           >Zachary Knuttila |
-          <a href="https://www.carmengoetz.ca" target="_blank">
-            Carmen Goetz
-          </a>
+          <a href="https://www.carmengoetz.ca" target="_blank"> Carmen Goetz </a>
         </strong>
       </v-row>
     </v-col>
@@ -33,16 +31,9 @@
           </template>
           <v-card>
             <v-card-actions class="footer__dialog px-6 pt-4">
-              <v-card-title class="footer--text text-h5"
-                >Contact Zachary</v-card-title
-              >
+              <v-card-title class="footer--text text-h5">Contact Zachary</v-card-title>
               <v-spacer></v-spacer>
-              <v-btn
-                fab
-                text
-                @click="dialog = false"
-                class="footer__dialog--close"
-              >
+              <v-btn fab text @click="dialog = false" class="footer__dialog--close">
                 <v-icon>mdi-close</v-icon>
               </v-btn>
             </v-card-actions>
@@ -111,7 +102,7 @@ export default {
 
 @media (prefers-color-scheme: dark) {
   .footer {
-    background-color: #360000 !important;
+    background-color: transparent !important;
     color: #bec6f3 !important;
 
     &__button {

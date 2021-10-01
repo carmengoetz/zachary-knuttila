@@ -1,60 +1,24 @@
 <template>
-  <v-container>
-    <v-row no-gutters justify="center" align="center" class="my-4 my-md-0"
-      ><router-link
-        :to="{
-          name: 'Home',
-        }"
-      >
-        <v-img
-          max-height="40"
-          max-width="300"
-          contain
-          src="../assets/heading.png"
-          lazy-src="../assets/heading-low.png"
-          class="nav--dark"
-          ><template v-slot:placeholder>
-            <v-row class="fill-height ma-0" align="center" justify="center">
-              <v-progress-circular
-                indeterminate
-                color="grey lighten-5"
-              ></v-progress-circular>
-            </v-row> </template
-        ></v-img>
-        <v-img
-          max-height="40"
-          max-width="300"
-          contain
-          src="../assets/heading2.png"
-          lazy-src="../assets/heading2-low.png"
-          class="nav--light"
-          ><template v-slot:placeholder>
-            <v-row class="fill-height ma-0" align="center" justify="center">
-              <v-progress-circular
-                indeterminate
-                color="grey lighten-5"
-              ></v-progress-circular>
-            </v-row> </template
-        ></v-img> </router-link
-    ></v-row>
-    <v-row
-      no-gutters
-      justify="center"
-      align="center"
-      class="my-0 my-sm-4 mx-auto"
-    >
-      <v-col v-for="page in pages" :key="page.index" :cols="page.col">
+  <v-app-bar
+    flat
+    max-height="80"
+    height="80"
+    color="transparent"
+    class="nav px-0 px-sm-16 mt-4"
+  >
+    <v-row no-gutters>
+      <v-col cols="12" md="9" xl="10" class="mt-16 mt-md-6">
         <router-link
           :to="{
-            name: page.name,
+            name: 'Home',
           }"
         >
           <v-img
-            max-height="30"
+            :max-width="getImageWidth()"
             contain
-            :src="page.imgDark"
-            :lazy-src="page.lazyDark"
-            class="nav--dark"
+            src="../assets/heading.png"
+            lazy-src="../assets/heading-low.png"
+            class="nav--dark mx-auto mx-md-0"
             ><template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular
@@ -64,11 +28,56 @@
               </v-row> </template
           ></v-img>
           <v-img
-            max-height="30"
+            :max-width="getImageWidth()"
+            contain
+            src="../assets/heading2.png"
+            lazy-src="../assets/heading2-low.png"
+            class="nav--light mx-auto mx-md-0"
+            ><template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row>
+            </template>
+            ></v-img
+          >
+        </router-link></v-col
+      ><v-spacer></v-spacer>
+      <v-col
+        :cols="page.cols"
+        :md="page.md"
+        xl="1"
+        v-for="page in pages"
+        :key="page.index"
+      >
+        <router-link
+          :to="{
+            name: page.name,
+          }"
+          class="mx-8 align-end"
+        >
+          <v-img
+            :max-width="page.width"
+            contain
+            :src="page.imgDark"
+            :lazy-src="page.lazyDark"
+            class="nav--dark mx-auto mx-md-0"
+            ><template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row> </template
+          ></v-img>
+          <v-img
+            :max-width="page.width"
             contain
             :src="page.imgLight"
             :lazy-src="page.lazyLight"
-            class="nav--light"
+            class="nav--light mx-auto mx-md-0"
             ><template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular
@@ -80,7 +89,7 @@
         </router-link>
       </v-col>
     </v-row>
-  </v-container>
+  </v-app-bar>
 </template>
 
 <script>
@@ -97,7 +106,9 @@ export default {
           lazyDark: require("@/assets/Gallery-low.png"),
           imgLight: require("@/assets/Gallery2.png"),
           lazyLight: require("@/assets/Gallery2-low.png"),
-          col: 7,
+          cols: "7",
+          md: "2",
+          width: window.matchMedia("(min-width: 600px)").matches ? "148" : "111",
           exact: false,
         },
         {
@@ -107,17 +118,25 @@ export default {
           lazyDark: require("@/assets/cv-low.png"),
           imgLight: require("@/assets/cv2.png"),
           lazyLight: require("@/assets/cv2-low.png"),
-          col: 5,
+          cols: "5",
+          md: "1",
+          width: window.matchMedia("(min-width: 600px)").matches ? "61" : "46",
           exact: false,
         },
       ],
     };
+  },
+  methods: {
+    getImageWidth: () => {
+      return window.matchMedia("(min-width: 600px)").matches ? "400" : "300";
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .nav {
+  z-index: 1;
   &--light {
     display: flex;
     @media (prefers-color-scheme: dark) {
