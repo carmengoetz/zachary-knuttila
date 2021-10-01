@@ -4,7 +4,7 @@
 
 The code for Zachary Knuttila's portfolio website lives here.
 
-The site is live at https:/zacharyknuttila.com
+The site is live at https:/zacharyjknuttila.com
 
 I built this with:
 
