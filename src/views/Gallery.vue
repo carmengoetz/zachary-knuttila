@@ -1,5 +1,5 @@
 <template>
-  <v-container class="mt-8 mt-md-0">
+  <v-container>
     <v-row class="d-none d-sm-flex">
       <v-col cols="12" lg="6">
         <v-row v-for="image in images" :key="image.index">
@@ -30,7 +30,7 @@
         </v-row>
       </v-col>
     </v-row>
-    <v-row class="d-flex d-sm-none">
+    <v-row no-gutters class="d-flex d-sm-none">
       <div v-for="image in images" :key="image.index" class="mx-auto">
         <GalleryImageMobile
           :index="image.index"

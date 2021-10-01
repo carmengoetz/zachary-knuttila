@@ -4,7 +4,7 @@
     max-height="132"
     height="132"
     color="transparent"
-    class="nav px-0 px-sm-16 mt-4 mt-md-0"
+    class="nav px-0 px-md-16"
   >
     <v-row no-gutters>
       <v-col cols="12" md="9" xl="10">
@@ -15,6 +15,7 @@
         >
           <v-img
             :max-width="getImageWidth()"
+            contain
             src="../assets/heading.png"
             lazy-src="../assets/heading-low.png"
             class="nav--dark mx-auto mx-md-0 my-4 my-md-0"
@@ -28,6 +29,7 @@
           ></v-img>
           <v-img
             :max-width="getImageWidth()"
+            contain
             src="../assets/heading2.png"
             lazy-src="../assets/heading2-low.png"
             class="nav--light mx-auto mx-md-0"
