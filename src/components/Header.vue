@@ -4,7 +4,7 @@
     max-height="132"
     height="132"
     color="transparent"
-    class="nav px-0 px-md-16"
+    class="nav mt-n2 mb-n6 my-sm-0 px-0 px-md-16"
   >
     <v-row no-gutters>
       <v-col cols="12" md="9" xl="10">
@@ -18,7 +18,7 @@
             contain
             src="../assets/heading.png"
             lazy-src="../assets/heading-low.png"
-            class="nav--dark mx-auto mx-md-0 my-4 my-md-0"
+            class="nav--dark mx-auto mx-md-0 my-2 my-md-0"
             ><template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular
@@ -61,7 +61,8 @@
             :max-width="page.width"
             :src="page.imgDark"
             :lazy-src="page.lazyDark"
-            class="nav--dark mx-auto mx-md-0"
+            class="nav--dark mr-md-0 ml-md-0"
+            :class="page.class"
             ><template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular
@@ -74,7 +75,7 @@
             :max-width="page.width"
             :src="page.imgLight"
             :lazy-src="page.lazyLight"
-            class="nav--light mx-auto mx-md-0"
+            class="nav--light mr-md-0 ml-md-0"
             ><template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular
@@ -103,9 +104,10 @@ export default {
           lazyDark: require("@/assets/Gallery-low.png"),
           imgLight: require("@/assets/Gallery2.png"),
           lazyLight: require("@/assets/Gallery2-low.png"),
-          cols: "7",
+          cols: "6",
           md: "2",
           width: window.matchMedia("(min-width: 600px)").matches ? "148" : "111",
+          class: "ml-auto",
           exact: false,
         },
         {
@@ -115,9 +117,10 @@ export default {
           lazyDark: require("@/assets/cv-low.png"),
           imgLight: require("@/assets/cv2.png"),
           lazyLight: require("@/assets/cv2-low.png"),
-          cols: "5",
+          cols: "6",
           md: "1",
           width: window.matchMedia("(min-width: 600px)").matches ? "61" : "46",
+          class: "ml-16",
           exact: false,
         },
       ],
@@ -125,7 +128,7 @@ export default {
   },
   methods: {
     getImageWidth: () => {
-      return window.matchMedia("(min-width: 600px)").matches ? "400" : "300";
+      return window.matchMedia("(min-width: 600px)").matches ? "450" : "300";
     },
   },
 };
