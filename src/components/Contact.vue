@@ -79,10 +79,10 @@ export default {
     sendEmail: (e) => {
       emailjs
         .sendForm(
-          "service_4ysvek7",
-          "template_lg8tddi",
+          "service_1vw3h5i",
+          "template_u4k6esy",
           e.target,
-          "user_20V2lpCRDxS6tEJvEjxAP"
+          "user_DfC4G6FpB922cevUdEDeh"
         )
         .then(
           (result) => {
