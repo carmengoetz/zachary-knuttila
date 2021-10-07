@@ -1,6 +1,7 @@
 <template>
   <v-app>
-    <Header />
+    <Header class="d-none d-md-inline" />
+    <HeaderMobile class="d-inline d-md-none" />
     <v-main>
       <transition name="fade" mode="out-in">
         <router-view />
@@ -13,9 +14,10 @@
 <script>
 import Footer from "./components/Footer.vue";
 import Header from "./components/Header.vue";
+import HeaderMobile from "./components/HeaderMobile.vue";
 
 export default {
-  components: { Header, Footer },
+  components: { Header, HeaderMobile, Footer },
   name: "App",
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row no-gutters>
-      <v-col class="d-none d-sm-inline">
+      <v-col md="6" class="d-none d-sm-inline">
         <v-row no-gutters class="mb-4">
           <v-img
             max-width="600"
@@ -32,14 +32,14 @@
               </v-row> </template
           ></v-img>
         </v-row>
-        <v-row no-gutters>
+        <v-row no-gutters justify="center">
           <p class="main--text ml-8">
             {{ title }}<br />
             {{ medium }}
           </p>
         </v-row>
       </v-col>
-      <v-col>
+      <v-col md="5">
         <slot></slot>
       </v-col>
       <v-col cols="12" class="d-inline d-sm-none">
