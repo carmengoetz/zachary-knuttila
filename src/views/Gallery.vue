@@ -75,8 +75,8 @@ export default {
         index: 2,
         image: require("@/assets/gallery/TheSoundOfWishingIWasAnywhereElseStoneLithograph2018.png"),
         imageLazy: require("@/assets/gallery/TheSoundOfWishingIWasAnywhereElseStoneLithograph2018-low.png"),
-        title: "Learning to Tie Shoes",
-        medium: "Guessing Generative Animation",
+        title: "The Sound of Wishing I was Anywhere Else",
+        medium: "Stone Lithograph",
         date: "2018",
       },
       {
